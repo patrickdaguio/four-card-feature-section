@@ -1,0 +1,67 @@
+// Card Component
+.card {
+  box-shadow: 0rem 0.9375rem 1.875rem -0.6875rem rgba(131, 166, 210, 0.5);
+  border-radius: 4px;
+  width: 350px;
+  height: 250px;
+  margin: 1em;
+  padding: 1.5em 2em;
+  position: relative;
+
+  @include media(">=650px", "<=1200px") {
+    width: 280px;
+    height: 230px;
+    margin: 2em 1em;
+  }
+
+  @include media(">=375px", "<=650px") {
+    width: 310px;
+    height: 220px;
+    margin: 1.5em;
+  }
+
+  @include media("<375px") {
+    width: 250px;
+    height: 200px;
+  }
+
+  &__head {
+    font-size: 1.35rem;
+    color: $darkBlue;
+  }
+
+  &__desc {
+    margin-top: 0.7em;
+    font-size: 0.88rem;
+    color: $darkBlue;
+    line-height: 1.8em;
+
+    @include media("<650px") {
+      margin-top: 0.3em;
+    }
+  }
+
+  &__img {
+    @include flex(flex, flex-end, flex-end, row);
+    position: absolute;
+    right: 30px;
+    bottom: -50px;
+    padding-bottom: 6em;
+
+    @include media(">=650px", "<=1200px") {
+      right: 25px;
+      padding-bottom: 5em;
+    }
+
+    @include media("<650px") {
+      right: 32px;
+      bottom: -65px;
+    }
+
+    img {
+      @include media("<=1200px") {
+        width: 85%;
+      }
+    }
+  }
+}
