@@ -23,20 +23,19 @@
   text-align: center;
   margin-bottom: 3.7rem;
   width: 530px;
-  margin-top: -3em;
+  margin-top: 2em;
 
-  @include media("<=950px") {
+  @include media(">650px", "<=950px") {
     margin: 1.5em 0em;
   }
 
-  @include media("<=650px") {
+  @include media(">=375px", "<=650px") {
     width: 300px;
     margin-top: 4em;
   }
 
   @include media("<375px") {
     width: 220px;
-    margin-top: 2em;
     margin-bottom: 0em;
   }
 
